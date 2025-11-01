@@ -1,0 +1,549 @@
+
+:root{
+  --bg: #070707;
+  --card: #0b0b0b;
+  --muted: #8b8b8b;
+  --white: #fff;
+  --accent: #1877f2;
+}
+
+* { box-sizing: border-box; }
+body, html, #root { height: 100%; margin: 0; font-family: Arial, sans-serif; }
+
+
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+  width: 250px;
+  background: #000;
+  color: var(--white);
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.insta_logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 28px;
+  margin: 0 0 10px 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  padding: 10px 0;
+  cursor: pointer;
+  color: #ddd;
+ 
+}
+.menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+  background: none;
+}
+#msgid{
+  background-color: #000000;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 5px;
+  line-height: 1;
+  min-width: 16px;
+  text-align: center;
+}
+
+
+  .menu #homeid{
+    color: #fffbfb;
+  }
+.menu li span { opacity: 0.95; }
+
+.menu li:hover { color: #fff; }
+
+.sidebar-divider {
+  width: 1px;
+  background: #222;
+  height: 100vh;
+  position: fixed;
+  left: 240px; /* Adjust based on your sidebar width */
+  top: 0;
+  z-index: 1;
+}
+
+/* footer in sidebar */
+.sidebar-footer {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.more, .meta { display:flex; align-items:center; gap:10px; padding:8px 0; color:#ccc; }
+.more:hover { color: #fff; }
+
+/* ---------- MAIN CONTENT AREA ---------- */
+.main-content {
+  margin-left: 250px; /* room for sidebar */
+  display: flex;
+  gap: 80px;
+  padding: 20px;
+  background-color: #000;
+}
+
+.stories {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  background-color: black;
+}
+
+.story {
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+.story-border {
+  width: 71px;
+  height: 71px;
+  border-radius: 60%;
+  padding: 3px;
+  background: linear-gradient(90deg, orange, red, purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-border img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid black; /* inner gap */
+  object-fit: cover;
+}
+
+.story p {
+  margin-top: 5px;
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: black;
+  padding: 20px 0;
+  margin-bottom: 120px;
+}
+
+.post {
+  width: 470px;
+  margin: 0 auto;
+  background: black;
+  color: white;
+  /* border: 1px solid #262626;
+  border-radius: 8px; */
+  font-family: Arial, sans-serif;
+}
+
+/* Top Section */
+.post-top {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.post-user {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-profile {
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, orange, red, purple);
+  padding: 2px;
+}
+
+.post-username {
+  
+  font-weight: bold;
+}
+
+.post-time {
+  color: gray;
+  font-size: 12px;
+}
+
+.post-options {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Image */
+.post-img {
+  border: 1px solid #373030;
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+}
+
+/* Actions */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+}
+
+.left-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Likes */
+.post-likes {
+  padding: 0 12px 12px;
+  font-weight: bold;
+}
+.post-likes-line {
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.liked-by {
+  font-weight: 500;
+  color: #fff;
+}
+
+.others {
+  font-weight: 500;
+  color: #fff;
+}
+
+.post-caption {
+  color: white;
+  margin: 5px 0;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.post-comments {
+  color: #8e8e8e;
+  font-size: 14px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.comment-box:hover {
+  background-color: #1a1a1a;
+  border: none;
+  outline: none;
+}
+
+
+/* ---------- RIGHT COLUMN (suggestions) ---------- */
+.right-column {
+  width: 320px;
+  padding: 0px 0;
+  color: #ddd;
+  background-color: #000;
+}
+
+.profile-row {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom: 16px;
+}
+
+.profile-avatar {
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  object-fit:cover;
+  border: 2px solid rgba(255,255,255,0.06);
+}
+
+.profile-info { display:flex; align-items:center; justify-content:space-between; width:100%; }
+.profile-info strong { font-size: 15px; display:block; }
+.profile-info .switch { color: var(--accent); font-size: 14px; cursor: pointer; }
+
+/* suggestions header */
+.suggestions-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin: 8px 0 12px;
+  color: #bdbdbd;
+}
+.see-all { color: #f5f6fc; cursor:pointer; font-size:13px; }
+
+/* suggestion items */
+.suggestions-list { display:flex; flex-direction:column; gap:12px; }
+
+.suggestion-item {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background: transparent;
+  padding: 6px 0;
+}
+
+.suggestion-avatar {
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  object-fit:cover;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.suggestion-texts { flex:1; }
+.suggestion-username { font-weight:600; font-size:14px; color:#fff; }
+.suggestion-followed { font-size:12px; color:var(--muted); margin-top:4px; }
+
+.follow-btn {
+  background: transparent;
+  border: none;
+  color: #1877f2;
+  font-weight:600;
+  cursor: pointer;
+  padding:6px 8px;
+}
+
+/* bottom links */
+.links {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.links span { display:block; margin-bottom: 6px; }
+
+copyright{
+  display:block;
+}
+
+copyright, .copyright {
+  margin-top: 12px;
+  color: #7a7a7a;
+  font-size: 12px;
+}
+
+
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 1024px) {
+  .main-content {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 999;
+  }
+
+  .sidebar-divider {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+    margin-bottom: 0;
+    gap: 20px;
+  }
+
+  .search-box {
+    display: block !important;
+    width: 1500px;
+    color: #fff;
+    margin-left: 120px;
+    background: #787474;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    flex-direction: column;
+    padding-top: 70px; /* leave room for mobile nav bar */
+    gap: 40px;
+  }
+
+  .right-column {
+    width: 100%;
+    padding: 10px 20px;
+    order: 2;
+  }
+
+  .posts {
+    padding: 10px 0;
+    margin-bottom: 80px;
+  }
+
+  .post {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .stories {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+
+  .story {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .profile-row, .suggestion-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .profile-info strong {
+    font-size: 13px;
+  }
+
+  .follow-btn {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+
+  .story-border {
+    width: 60px;
+    height: 60px;
+  }
+
+  .story-border img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .insta_logo {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+.stories {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.story {
+  flex: 0 0 auto;
+  margin-right: 12px;
+}
+
+
+@media (max-width: 768px) {
+  .right-column {
+    display: none;
+  }
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+

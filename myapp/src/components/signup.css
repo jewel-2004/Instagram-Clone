@@ -1,0 +1,175 @@
+body, .page {
+  background: #000;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.login-box {
+  background:Black;
+  border: 1px solid #3e3e3e;
+  padding: 40px 40px 24px 40px;
+  border-radius: 3px;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Brush Script MT';
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.signup-text {
+  color: #ccc;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.fb-btn {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.90rem;
+  cursor: pointer;
+  background: #0a60d0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.fb-icon {
+  font-size: 1.2rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 16px 0;
+  color: #aaa;
+  font-size: 0.90rem;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #333;
+  margin: 0 8px;
+}
+
+.info-text {
+  color: #888;
+  font-size: 0.8rem;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.info-text a {
+  color: #3b41bb;
+  text-decoration: none;
+}
+
+.terms-text {
+  color: #888;
+  font-size: 0.8rem;
+  margin: 10px 0 18px 0;
+  text-align: center;
+}
+
+.terms-text a {
+  color: #3b41bb;
+  text-decoration: none;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 9px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #3b41bb;
+  color: #fff;
+  text-decoration: none;
+}
+
+.signup-box {
+  background: black;
+  border: 1px solid #3e3e3e;
+  margin-top: 16px;
+  padding: 20px 0;
+  width: 390px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.signup-box a {
+  color: #3b41bb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #888;
+  
+}
+
+.links {
+  margin-bottom: 16px;
+}
+
+.links a {
+  color: #888;
+  margin: 0 8px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.language-dropdown {
+  background: black;
+  color: #b7b3b3;
+  border: 1px solid #090000;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
